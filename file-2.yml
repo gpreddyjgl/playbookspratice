@@ -1,0 +1,19 @@
+---
+- name: Play 1
+  hosts: localhost
+  check_mode: yes # Do not modify this line
+  tasks:
+    - name: Create /tmp/testfile.txt
+      file:
+        path: /tmp/testfile.txt
+        state: touch
+
+  - name: Play 2
+    hosts: localhost
+    check_mode: yes # Do not modify this line
+    tasks:
+      - name: Create /tmp/testfile.txt
+        file:
+          path: /tmp/testfile.txt
+          state: touch
+

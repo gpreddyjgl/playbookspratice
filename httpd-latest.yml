@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Update httpd to latest version
+      check_mode: yes # Do not modify this line
+      yum:
+        name: httpd
+        state: latest

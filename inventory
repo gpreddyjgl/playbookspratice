@@ -1,0 +1,7 @@
+[db_servers]
+lamp-db ansible_connection=local mysqlservice=mysqld mysql_port=3306 dbname=ecomdb dbuser=ecomuser dbpassword=ecompassword
+
+[web_servers]
+lamp-web ansible_connection=local httpd_port=80 repository=https://github.com/kodekloudhub/learning-app-ecommerce.git
+
+

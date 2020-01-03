@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Delete httpd package
+      check_mode: yes # Do not modify this line
+      yum:
+        name: httpd
+        state: absent
